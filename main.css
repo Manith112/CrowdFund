@@ -1,0 +1,573 @@
+@import url('https://fonts.googleapis.com/css2?family=Commissioner:wght@400;600;700&display=swap');
+:root{
+    --Moderate-cyan: hsl(176, 50%, 47%);
+--Dark-cyan: hsl(176, 72%, 28%);
+
+/* ### Neutral */
+
+--Black: hsl(0, 0%, 0%);
+--Dark-gray: hsl(0, 0%, 48%);
+}
+*{
+    font-family: 'Commissioner', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: url("./crowdfunding-product-page-main/images/image-hero-desktop.jpg") no-repeat;
+    background-color: whitesmoke;
+    height: auto;
+    
+}
+.container{
+    padding: 50px 100px;
+    display: flex;
+    justify-content: space-between;
+}
+.list {
+    display: flex;
+    gap: 20px;
+    color: white;
+    list-style: none;
+    font-weight: 600;
+}
+.list > li{
+    transition: 0.5s;
+}
+.list > li:hover{
+    cursor: pointer;
+    color: var(--Moderate-cyan);
+}
+#burger{
+    display: none;
+}
+.expand{
+    position: relative;
+}
+.body{
+    padding: 40px 20px ;
+    /* justify-content: center; */
+    align-items: center;
+    display: flex;
+    margin: 160px auto 40px auto;
+    background-color: white;
+    width: 650px;
+    border-radius: 10px;
+    
+    flex-direction: column;
+    position: relative;
+}
+.master{
+    position: absolute;
+    top: -30px;
+}
+.title-master{
+    text-align: center;
+}
+.para{
+    color: var(--Dark-gray);
+    font-size: 14px;
+    padding: 10px 0 ;
+    text-align: center;
+}
+.two-btn{
+    margin: 10px 0 0px 0;
+    display: flex;
+    gap: 200px;
+}
+.two-btn > .first-button{
+    padding: 12px 30px;
+    background-color: var(--Moderate-cyan);
+    border-radius: 30px;
+   font-weight: 600;
+    color: white;
+    border: none;
+}
+.two-btn > .first-button:hover{
+    background-color: var(--Dark-cyan);
+    cursor: pointer;
+    transition: 0.5s;
+}
+.two-btn > .second-button {
+    padding: 19.5px 30px 19.5px 70px;
+    background-color: whitesmoke;
+    border-radius: 30px;
+    color: var(--Dark-gray);
+   display: flex;
+   font-weight: 600;
+    border: none;
+    position: relative;
+}
+.second-button > .circle , .second-button-select > .circle{
+    position: absolute;
+   left: 0;
+   top:0;
+   transition: 0.5s;
+}
+.second-button > .circle:hover, .second-button-select > .circle:hover{
+    opacity: 0.7;
+    cursor: pointer;
+}
+.second-button-select{
+    display: none;
+    padding: 19.5px 30px 19.5px 70px;
+    background-color: whitesmoke;
+    border-radius: 30px;
+    color: var(--Moderate-cyan);
+ 
+   font-weight: 600;
+    border: none;
+    position: relative;
+}
+/* second card  */
+.second-body{
+    padding: 30px ;
+    
+    background-color: white;
+    width: 650px;
+    border-radius: 10px;
+    margin: auto;
+}
+.same{
+    display: flex;
+}
+.price{
+    flex-direction: column;
+    display: flex;
+    height: 100%;
+    border-right: 1px solid var(--Dark-gray);
+    
+    padding: 0 30px;
+}
+.price-two{
+    flex-direction: column;
+    display: flex;
+    height: 100%;
+    border-right: 1px solid var(--Dark-gray);
+    
+    padding: 0 50px 0 30px;
+}
+.price-three{
+    flex-direction: column;
+    display: flex;
+    padding: 0 50px 0 30px;
+}
+.price > .second, .price-two > .second, .price-three > .second {
+    color: var(--Dark-gray);
+}
+.loading-range-container {
+    width: 520px; /* Adjust the width as needed */
+    height: 10px; /* Adjust the height as needed */
+   border-radius: 10px;
+    background-color: whitesmoke;
+    position: relative;
+    margin: 40px 30px 0 30px;
+  }
+
+  .loading-range {
+    border-radius: 10px;
+    height: 100%;
+    background-color: var(--Moderate-cyan); /* Adjust the background color as needed */
+    width: 89%; /* Set the initial width to 70% */
+    /* Adjust the animation duration as needed */
+  }
+
+  /* third body  */
+  .third-body{
+    padding: 30px 40px;
+    
+    background-color: white;
+    width: 650px;
+    border-radius: 10px;
+    margin: 40px auto 100px auto;
+}
+.detail{
+    padding: 20px 0;
+    line-height: 25px;
+    color: var(--Dark-gray);
+    font-size: 15px;
+}
+.detail-one{
+    line-height: 25px;
+    color: var(--Dark-gray);
+    font-size: 15px;
+    padding-bottom: 20px;
+}
+.bamboo , .bamboo-opacity{
+    border: 1px solid rgba(186, 183, 183, 0.945);
+    padding:30px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+.row , .left{
+    display: flex;
+    justify-content: space-between;
+}
+.row > p{
+    color: var(--Moderate-cyan);
+    font-weight: 600;
+    padding-top: 4px;
+}
+.des{
+    padding: 30px 0;
+    color: var(--Dark-gray);
+    line-height: 25px;
+    font-size: 14px;
+}
+.left > button {
+    padding: 12px 25px;
+    background-color: var(--Moderate-cyan);
+    color: white;
+    border: none;
+    border-radius: 20px;
+    transition: 0.5s;
+}
+.left > button:hover{
+    background-color: var(--Dark-cyan);
+    cursor: pointer;
+}
+.left > h3 > span {
+    color: var(--Dark-gray);
+    font-size: 12px;
+    padding-left: 5px;
+   
+}
+.left > h3{
+    font-size: 30px;
+}
+.bamboo-opacity{
+    opacity: 0.5;
+    
+}
+
+/* loaded page */
+
+.new{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    justify-content: center;
+    align-items: center;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+   
+   
+}
+.modal{
+    padding: 30px;
+    width: 650px;
+    background-color: white;
+    border-radius: 10px;
+    margin: 500px auto 100px auto;
+    position: relative;
+    color: black; 
+}
+#close-menu{
+    display: none;
+    width: 30px;
+}
+#close-menu:hover{
+    cursor: pointer;
+    opacity: 0.6;
+}
+#close{
+    position: absolute;
+    right: 30px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+#close:hover{
+  opacity: 0.5;
+   
+}
+.bit-p{
+    padding: 20px 0 35px 0;
+    color: var(--Dark-gray);
+    font-size: 15px;
+}
+.reward , .reward-opacity{
+    padding: 20px;
+    border: 1px solid rgba(186, 183, 183, 0.945);
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.reward-opacity{
+    opacity: 0.5;
+}
+.card{
+    display: flex;
+    gap: 20px; 
+}
+.card-1{
+    display: flex;
+    /* gap: 20px; */
+    justify-content: space-between;
+}
+.select-row{
+    display: flex;
+    gap: 20px;
+}
+.card > .choice , .select-row > .choice{
+    font-weight: bold;
+}
+input[type = "radio"]{
+    cursor: pointer;
+    width: 29px;
+    height: 20px;
+    margin-top: 10px;
+    accent-color: var(--Dark-cyan);
+}
+.tell{
+    padding: 0px 0 10px 48px;
+    color: var(--Dark-gray);
+    line-height: 25px;
+    font-size: 14px;
+}
+.green{
+    color: var(--Moderate-cyan);
+    font-weight: 600;
+}
+.number-1{
+    padding-left: 145px;
+    font-weight: bold;
+    font-size: 20px;
+}
+.number-2{
+    padding-left: 70px;
+    font-weight: bold;
+    font-size: 20px;
+}
+.number{
+    padding-left: 120px;
+    font-weight: bold;
+    font-size: 20px;
+    
+}
+.number-1 > span, .number-2 > span{
+    color: var(--Dark-gray);
+    font-size: 14px;
+}
+.number > span{
+    color: var(--Dark-gray);
+    font-size: 14px;
+}
+
+/* input checked  */
+.show{
+    margin: 20px 0 10px 0;
+    /* display: none; */
+   
+    flex-direction: column;
+}
+.show > hr{
+    opacity: 0.4;
+}
+.show-1{
+    justify-content: space-between;
+    display: flex;
+    margin-top: 20px;
+}
+.show-1 > p{
+    color: var(--Dark-gray);
+    padding-top: 5px;
+}
+.display > input{
+    border-radius: 20px;
+    padding: 10px;
+    width: 80px;
+    border: 1px solid var(--Moderate-cyan);
+    font-size: 12px;
+    margin-right: 10px;
+    font-weight: bold;
+}
+.display > button{
+    border-radius: 20px;
+    padding: 10px;
+    width: 80px;
+    background-color: var(--Moderate-cyan);
+    border: none;
+    color: white;
+    font-size: 12px;
+    transition: 0.5s;
+}
+.display > button:hover{
+    background-color: var(--Dark-cyan);
+    cursor: pointer;
+}
+#show-1, #show-2, #show-3{
+    display: none;
+}
+.show > .false{
+    color: red;
+    font-size: 12px;
+    justify-content: right;
+    padding-top: 5px;
+    padding-right: 45px;
+    display: none;
+}
+.number-1-mobile{
+    display: none;
+}
+
+/* complete  */
+.completed{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    justify-content: center;
+    align-items: center;
+   
+}
+.nest{
+    padding: 30px;
+    width: 450px;
+    background-color: white;
+    border-radius: 10px;
+    margin: 100px auto 100px auto;
+    position: relative;
+    color: black; 
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+.nest > .bold {
+    padding: 40px 0 20px 0;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+}
+.nest > .thank {
+    text-align: center;
+    color: var(--Dark-gray);
+    font-size: 14px;
+    line-height: 25px;
+    padding-bottom: 20px;
+}
+.nest > .got {
+    border: none;
+    padding: 10px 20px;
+    color: white;
+    background-color: var(--Moderate-cyan);
+    border-radius: 20px;
+}
+.nest > .got:hover {
+    background-color: var(--Dark-cyan);
+    cursor: pointer;
+}
+
+@media screen and (max-width: 680px){
+    body{
+        background: url("./crowdfunding-product-page-main/images/image-hero-mobile.jpg") no-repeat;
+        background-size: contain;
+       
+        background-color: whitesmoke;
+  
+       
+    }
+    .body, .second-body, .third-body, .modal{
+        width: 400px; 
+    }
+    .body > .title-master{
+        width: 300px;
+    }
+    .two-btn{
+        gap: 10px;
+    }
+    .same{
+        flex-direction: column;
+        text-align: center;
+        padding: 0px 80px;
+    }
+    .price , .price-two{
+        padding: 20px;
+        border-right: none;
+        border-bottom: 1px solid var(--Dark-gray);
+    }
+    .price-three{
+        padding: 20px 20px 0 20px;
+    }
+    .loading-range-container{
+        width: 340px;
+    }
+    .row{
+        flex-direction: column;
+    }
+    .select-row{
+        /* flex-direction: column; */
+        gap: 0px;
+        padding-left: 20px;
+    }
+    .card-1{
+        justify-content: unset;
+    }
+    .select-row{
+        gap: 20px;
+    }
+    .number-1, .number, .number-2{
+        display: none;
+    }
+    .number-1-mobile{
+        display: flex;
+    }
+    .number-1-mobile{
+        color: var(--Black);
+        font-weight: bold;
+        font-size: 18px;
+    }
+    .number-1-mobile > span {
+        color: var(--Dark-gray);
+        font-size: 14px;
+        padding-top: 3px;
+        padding-left: 5px;
+    }
+    .select-row > .choice, .select-row > .green{
+        font-size: 14px;
+    }
+    .background{
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        top: 0;
+        left: 0;
+    }
+    .list{
+        
+        display: none;
+      
+        color: var(--Black);
+        position: absolute;
+        right: 50px;
+        top: 100px;
+        border-radius: 10px;
+        background-color: white;
+        flex-direction: column;
+        width: 200px;
+        padding: 20px;
+        
+    }
+    #burger{
+        display: flex;
+        width: 30px;
+    }
+    #burger:hover{
+        cursor: pointer;
+        opacity: 0.6;
+    }
+    .container{
+        position: relative;
+        padding: 50px;
+    }
+}
